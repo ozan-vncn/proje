@@ -10,6 +10,8 @@ namespace proje
     {
         string Ad { get; set; }
         string Soyad { get; set; }
+
+        string Mail { get; set; }
         
             
     }
@@ -17,8 +19,9 @@ namespace proje
     {
         private string _ad;
         private string _soyad;
-        private int _telefon;
+        private string _mail;
         public string musteri;
+        
         public string Ad
         {
             get { return _ad; }
@@ -29,10 +32,15 @@ namespace proje
             get { return _soyad; }
             set { _soyad = value; }
         }
+        public string Mail
+        {
+            get { return _mail; }
+            set { _mail = value; }
+        }
      
         void bilgiGetir()
         {
-            musteri = "Adı: " + Ad + "Soyadı:" + Soyad;
+            
         }
     }
 }

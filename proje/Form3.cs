@@ -16,5 +16,15 @@ namespace proje
         {
             InitializeComponent();
         }
+
+        private void Form3_Load(object sender, EventArgs e)
+        {
+            listView1.Columns.Add("Ad",);
+            listView1.Columns.Add("Soyad");
+            listView1.Columns.Add("Mail");
+            listView1.Columns.Add("Ürün");
+            listView1.Columns.Add("Seri No");
+            listView1.Columns.Add("Arıza Nedeni");
+        }
     }
 }
