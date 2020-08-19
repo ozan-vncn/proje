@@ -11,7 +11,7 @@ namespace proje
         string Ad { get; set; }
         string Soyad { get; set; }
 
-        string Mail { get; set; }
+        string Telefon { get; set; }
         
             
     }
@@ -19,8 +19,8 @@ namespace proje
     {
         private string _ad;
         private string _soyad;
-        private string _mail;
-        public string musteri;
+        private string _telefon;
+        
         
         public string Ad
         {
@@ -32,10 +32,10 @@ namespace proje
             get { return _soyad; }
             set { _soyad = value; }
         }
-        public string Mail
+        public string Telefon
         {
-            get { return _mail; }
-            set { _mail = value; }
+            get { return _telefon; }
+            set { _telefon = value; }
         }
      
         void bilgiGetir()

@@ -21,25 +21,30 @@ namespace proje
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (textBox1.Text.Length==0 || textBox2.Text.Length==0)
+            if (textBox1.Text.Length == 0 || textBox2.Text.Length == 0 || maskedTextBox1.Text.Length == 0)
             {
                 MessageBox.Show("Lütfen ilgili yerleri doldurunuz...");
             }
             else
             {
-                frm2.Show();//eğer  kullanıcı doğru giriş yaptıysa form2 ye geçsin dedim..
-                this.Hide();//form1 i gizle
+
                 Musteri musteri = new Musteri();
                 musteri.Ad = textBox1.Text;
                 musteri.Soyad = textBox2.Text;
-                
-                
+                musteri.Telefon = maskedTextBox1.Text;
+                string[] musteriBilgiler = { musteri.Ad, musteri.Soyad, musteri.Telefon };
+                ListViewItem musteriEkle = new ListViewItem(musteriBilgiler);
+                frm3.listView1.Items.Add(musteriEkle);
+                frm2.Show();//eğer  kullanıcı doğru giriş yaptıysa form2 ye geçsin dedim..
+                this.Hide();//form1 i gizle
             }
+            frm2.label1.Text = ("Sayın " + textBox1.Text + " " + textBox2.Text + " Ürün bilgilerini giriniz...");
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBox3.Text=="ozanvncn"&&textBox4.Text=="1234")
+            if (textBox3.Text == "ozanvncn" && textBox4.Text == "1234")
             {
                 frm3.Show();//eğer  kullanıcı doğru giriş yaptıysa form2 ye geçsin dedim..
                 this.Hide();//form1 i gizle
