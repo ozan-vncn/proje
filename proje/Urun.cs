@@ -18,8 +18,9 @@ namespace proje
         private string _urun;
         private string _seriNo; 
         private string _arizaNedeni;
-        
-       
+        private DateTime _giristarihi;
+        private DateTime _cikistarihi;
+
         public string Urun
         {
             set { _urun = value; }
@@ -34,6 +35,16 @@ namespace proje
         {
             set { _arizaNedeni = value; }
             get { return _arizaNedeni; }
+        }
+        public DateTime girisTarihi
+        {
+            set { _giristarihi = value; }
+            get { return _giristarihi; }
+        }
+        public DateTime cikisTarihi
+        {
+            set { _cikistarihi = value; }
+            get { return _cikistarihi; }
         }
 
     }
