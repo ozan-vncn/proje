@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_cikis = new System.Windows.Forms.Button();
             this.rtxtArizaNedeni = new System.Windows.Forms.RichTextBox();
             this.cmbUrun = new System.Windows.Forms.ComboBox();
             this.txtSeriNo = new System.Windows.Forms.TextBox();
@@ -36,7 +36,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btn_sil = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.lblkayitSayisi = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,16 +58,17 @@
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button2
+            // btn_cikis
             // 
-            this.button2.BackColor = System.Drawing.Color.Yellow;
-            this.button2.Location = new System.Drawing.Point(374, 250);
-            this.button2.Margin = new System.Windows.Forms.Padding(4);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(79, 46);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Çıkış";
-            this.button2.UseVisualStyleBackColor = false;
+            this.btn_cikis.BackColor = System.Drawing.Color.Yellow;
+            this.btn_cikis.Location = new System.Drawing.Point(374, 250);
+            this.btn_cikis.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_cikis.Name = "btn_cikis";
+            this.btn_cikis.Size = new System.Drawing.Size(79, 46);
+            this.btn_cikis.TabIndex = 1;
+            this.btn_cikis.Text = "Çıkış";
+            this.btn_cikis.UseVisualStyleBackColor = false;
+            this.btn_cikis.Click += new System.EventHandler(this.btn_cikis_Click);
             // 
             // rtxtArizaNedeni
             // 
@@ -137,17 +138,19 @@
             this.listView1.TabIndex = 4;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
+            this.listView1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseDoubleClick);
             // 
-            // button3
+            // btn_sil
             // 
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(240, 249);
-            this.button3.Margin = new System.Windows.Forms.Padding(4);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(79, 46);
-            this.button3.TabIndex = 1;
-            this.button3.Text = "Sil";
-            this.button3.UseVisualStyleBackColor = false;
+            this.btn_sil.BackColor = System.Drawing.Color.Red;
+            this.btn_sil.Location = new System.Drawing.Point(240, 249);
+            this.btn_sil.Margin = new System.Windows.Forms.Padding(4);
+            this.btn_sil.Name = "btn_sil";
+            this.btn_sil.Size = new System.Drawing.Size(79, 46);
+            this.btn_sil.TabIndex = 1;
+            this.btn_sil.Text = "Sil";
+            this.btn_sil.UseVisualStyleBackColor = false;
+            this.btn_sil.Click += new System.EventHandler(this.btn_sil_Click);
             // 
             // label7
             // 
@@ -322,8 +325,8 @@
             this.Controls.Add(this.lblkayitSayisi);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.listView1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.btn_cikis);
+            this.Controls.Add(this.btn_sil);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form3";
@@ -341,7 +344,7 @@
         }
 
         #endregion
-        public System.Windows.Forms.Button button2;
+        public System.Windows.Forms.Button btn_cikis;
         public System.Windows.Forms.RichTextBox rtxtArizaNedeni;
         public System.Windows.Forms.ComboBox cmbUrun;
         public System.Windows.Forms.TextBox txtSeriNo;
@@ -349,7 +352,7 @@
         public System.Windows.Forms.Label label5;
         public System.Windows.Forms.Label label6;
         public System.Windows.Forms.ListView listView1;
-        public System.Windows.Forms.Button button3;
+        public System.Windows.Forms.Button btn_sil;
         public System.Windows.Forms.Label label7;
         public System.Windows.Forms.Label lblkayitSayisi;
         public System.Windows.Forms.Label label1;
